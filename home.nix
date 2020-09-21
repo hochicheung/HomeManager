@@ -21,5 +21,6 @@
 				qbittorrent
 				emacsPackages.vterm
 				imagemagick
+				xclip
 	];
 }
