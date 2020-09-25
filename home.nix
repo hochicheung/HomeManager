@@ -22,5 +22,8 @@
 				emacsPackages.vterm
 				imagemagick
 				xclip
+				texlive.combined.scheme-medium
+				light
 	];
+
 }
