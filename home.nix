@@ -24,6 +24,8 @@
 				xclip
 				texlive.combined.scheme-medium
 				light
+				hunspell
+				hunspellDicts.en-us
 	];
 
 }
