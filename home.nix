@@ -32,6 +32,8 @@
 				ripgrep
 				dnsmasq
 				sqlite
+				graphviz
+				spotify
 				emacsPackages.vterm
 				emacsPackages.pdf-tools
 	];
