@@ -14,17 +14,18 @@
 	
   home.packages = with pkgs; [
 				rclone
-				discord
 				mupdf
 				cmake
+				discord
 				libtool
 				libvterm
 				qbittorrent
 				imagemagick
 				xclip
-				texlive.combined.scheme-medium
+				texlive.combined.scheme-full
 				hunspell
 				hunspellDicts.en-us
+				hunspellDicts.sv-se
 				gnuplot
 				krita
 				audacity
@@ -33,7 +34,6 @@
 				dnsmasq
 				sqlite
 				graphviz
-				spotify
 				emacsPackages.vterm
 				emacsPackages.pdf-tools
 	];
