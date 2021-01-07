@@ -36,5 +36,8 @@
 				graphviz
 				emacsPackages.vterm
 				emacsPackages.pdf-tools
+				python3
+				python39Packages.tldextract
+				qutebrowser
 	];
 }
