@@ -39,5 +39,18 @@
 				python3
 				python39Packages.tldextract
 				qutebrowser
+				clang
 	];
+
+	programs.ssh = {
+	  enable = true;
+		
+		matchBlocks = {
+			"github.com" = {
+			  identityFile = "~/.ssh/id_rsa-public-github";
+				identitiesOnly = true;
+				user = "Hochicheung";
+			};
+	  };
+	};
 }
