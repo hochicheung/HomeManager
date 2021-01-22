@@ -1,0 +1,1 @@
+/home/samcheung/.config/nixpkgs/home.nix
