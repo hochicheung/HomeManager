@@ -40,6 +40,7 @@
 				python39Packages.tldextract
 				qutebrowser
 				clang
+				jdk11
 	];
 
 	programs.ssh = {
