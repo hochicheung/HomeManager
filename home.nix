@@ -39,7 +39,7 @@
 				python3
 				python39Packages.tldextract
 				qutebrowser
-				clang
+				gcc
 				jdk11
 	];
 
