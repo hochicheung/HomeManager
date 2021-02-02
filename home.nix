@@ -27,9 +27,6 @@
 				hunspellDicts.en-us
 				hunspellDicts.sv-se
 				gnuplot
-				krita
-				audacity
-				vlc
 				ripgrep
 				dnsmasq
 				sqlite
