@@ -33,6 +33,7 @@
 				graphviz
 				emacsPackages.vterm
 				emacsPackages.pdf-tools
+				emacsPackages.org
 				qutebrowser
 				gcc
 				jdk11
