@@ -13,31 +13,33 @@
 	nixpkgs.config.allowUnfree = true;
 	
   home.packages = with pkgs; [
-				rclone
 				mupdf
 				cmake
 				discord
-				libtool
-				libvterm
 				qbittorrent
-				imagemagick
 				xclip
-				texlive.combined.scheme-full
-				hunspell
-				hunspellDicts.en-us
-				hunspellDicts.sv-se
-				gnuplot
 				ripgrep
 				dnsmasq
 				sqlite
 				graphviz
-				emacsPackages.vterm
-				emacsPackages.pdf-tools
-				emacsPackages.org
 				qutebrowser
 				gcc
 				jdk11
 				xlayoutdisplay
+
+				# Spelling
+				hunspell
+				hunspellDicts.en-us
+				hunspellDicts.sv-se
+				
+				# My Emacs dependencies 
+				emacsPackages.vterm
+				emacsPackages.pdf-tools
+				emacsPackages.org
+				libvterm
+				imagemagick
+				texlive.combined.scheme-full
+				libtool
 	];
 
 	programs.ssh = {
