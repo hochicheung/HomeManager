@@ -26,6 +26,7 @@
 				gcc
 				jdk11
 				xlayoutdisplay
+				syncthing
 
 				# Spelling
 				hunspell
@@ -52,5 +53,9 @@
 				user = "Hochicheung";
 			};
 	  };
+	};
+
+	services.syncthing = {
+	  enable = true;
 	};
 }
