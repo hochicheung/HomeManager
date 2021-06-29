@@ -28,6 +28,11 @@
 				xlayoutdisplay
 				syncthing
 
+				# E-mail
+				isync
+				msmtp
+				notmuch
+
 				# Spelling
 				hunspell
 				hunspellDicts.en-us
@@ -57,5 +62,38 @@
 
 	services.syncthing = {
 	  enable = true;
+	};
+
+	programs.mbsync.enable = true;
+	programs.msmtp.enable = true;
+	programs.notmuch = {
+	  enable = true;
+		hooks = {
+		  preNew = "mbsync --all";
+		};
+	};
+
+	accounts.email = {
+	  accounts.gmail-hoche = {
+		  address = "hoche002@gmail.com";
+		  imap = {
+		    host = "imap.gmail.com";
+		    port = 993;
+		  };
+		  mbsync = {
+		    enable = true;
+			  create = "maildir";
+		  };
+		  msmtp.enable = true;
+		  notmuch.enable = true;
+		  primary = true;
+		  realName = "Sam Cheung";
+		  passwordCommand = "keepassxc-cli show -sa password ~/Documents/keepass/Database181214.kdbx gmail-hoche-app";
+		  smtp = {
+		    host = "smtp.gmail.com";
+		    port = 587;
+		  };
+		  userName = "hoche002@gmail.com";
+		};
 	};
 }
