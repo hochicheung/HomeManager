@@ -95,5 +95,27 @@
 		  };
 		  userName = "hoche002@gmail.com";
 		};
+
+	  accounts.gmail-hochi = {
+		  address = "hochi.cheung.sam@gmail.com";
+		  imap = {
+		    host = "imap.gmail.com";
+		    port = 993;
+		  };
+		  mbsync = {
+		    enable = true;
+			  create = "maildir";
+		  };
+		  msmtp.enable = true;
+		  notmuch.enable = true;
+		  primary = false;
+		  realName = "Sam Cheung";
+		  passwordCommand = "keepassxc-cli show -sa password ~/Documents/keepass/Database181214.kdbx gmail-hochi-app";
+		  smtp = {
+		    host = "smtp.gmail.com";
+		    port = 587;
+		  };
+		  userName = "hochi.cheung.sam@gmail.com";
+		};
 	};
 }
