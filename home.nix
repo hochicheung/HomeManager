@@ -32,6 +32,7 @@
 				isync
 				msmtp
 				notmuch
+				bogofilter
 
 				# Spelling
 				hunspell
@@ -67,6 +68,8 @@
 	programs.mbsync.enable = true;
 	programs.msmtp.enable = true;
 	programs.notmuch = {
+		new.tags = [ "unread" "inbox" ];
+		search.excludeTags = [ "deleted" "spam" ];
 	  enable = true;
 		hooks = {
 		  preNew = "mbsync --all";
@@ -74,28 +77,6 @@
 	};
 
 	accounts.email = {
-	  accounts.gmail-hoche = {
-		  address = "hoche002@gmail.com";
-		  imap = {
-		    host = "imap.gmail.com";
-		    port = 993;
-		  };
-		  mbsync = {
-		    enable = true;
-			  create = "maildir";
-		  };
-		  msmtp.enable = true;
-		  notmuch.enable = true;
-		  primary = true;
-		  realName = "Sam Cheung";
-		  passwordCommand = "keepassxc-cli show -sa password ~/Documents/keepass/Database181214.kdbx gmail-hoche-app";
-		  smtp = {
-		    host = "smtp.gmail.com";
-		    port = 587;
-		  };
-		  userName = "hoche002@gmail.com";
-		};
-
 	  accounts.gmail-hochi = {
 		  address = "hochi.cheung.sam@gmail.com";
 		  imap = {
@@ -108,7 +89,7 @@
 		  };
 		  msmtp.enable = true;
 		  notmuch.enable = true;
-		  primary = false;
+		  primary = true;
 		  realName = "Sam Cheung";
 		  passwordCommand = "keepassxc-cli show -sa password ~/Documents/keepass/Database181214.kdbx gmail-hochi-app";
 		  smtp = {
