@@ -35,9 +35,9 @@
 				bogofilter
 
 				# Spelling
-				hunspell
-				hunspellDicts.en-us
-				hunspellDicts.sv-se
+				aspell
+				aspellDicts.sv
+				aspellDicts.en
 				
 				# My Emacs dependencies 
 				emacsPackages.vterm
