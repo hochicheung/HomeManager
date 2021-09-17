@@ -18,21 +18,20 @@
 				discord
 				qbittorrent
 				xclip
-				ripgrep
 				dnsmasq
-				sqlite
-				graphviz
 				qutebrowser
 				gcc
 				jdk11
 				xlayoutdisplay
 				syncthing
 
+				# Haskell
+				ghc
+
 				# E-mail
 				isync
 				msmtp
 				notmuch
-				bogofilter
 
 				# Spelling
 				aspell
@@ -45,8 +44,9 @@
 				emacsPackages.org
 				libvterm
 				imagemagick
-				texlive.combined.scheme-full
 				libtool
+				sqlite
+				graphviz
 	];
 
 	programs.ssh = {
@@ -91,7 +91,7 @@
 		  notmuch.enable = true;
 		  primary = true;
 		  realName = "Sam Cheung";
-		  passwordCommand = "keepassxc-cli show -sa password ~/Documents/keepass/Database181214.kdbx gmail-hochi-app";
+		  passwordCommand = "keepassxc-cli show -sa password ~/Documents/keepass/*.kdbx gmail-hochi-app";
 		  smtp = {
 		    host = "smtp.gmail.com";
 		    port = 587;
