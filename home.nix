@@ -41,13 +41,22 @@
 				# My Emacs dependencies 
 				emacsPackages.vterm
 				emacsPackages.pdf-tools
-				emacsPackages.org
 				libvterm
 				imagemagick
 				libtool
 				sqlite
 				graphviz
+
+				cached-nix-shell
 	];
+
+  programs.direnv = {
+    enable = true;
+    nix-direnv.enable = true;
+    enableBashIntegration = true;
+  };
+
+  programs.bash.shellAliases = { nix-shell = "cached-nix-shell"; };
 
 	programs.ssh = {
 	  enable = true;
